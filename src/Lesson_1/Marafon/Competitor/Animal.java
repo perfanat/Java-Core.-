@@ -1,20 +1,22 @@
-package Lesson_1.Marafon;
+package Lesson_1.Marafon.Competitor;
 
+// создание класса Животное
 public class Animal implements Competitor {
-    String type;
-    String name;
+    String type; // тип Ж
+    String name; // имя Ж
 
-    int maxRunDistance;
-    int maxJumpHeight;
-    int maxSwimDistance;
+    int maxRunDistance; // макс длина бега
+    int maxJumpHeight; // макс высота прыжка
+    int maxSwimDistance; // макс длина плавания
 
-    boolean onDistance;
+    boolean onDistance; // параметр На дистанции
 
     @Override
     public boolean isOnDistance() {
         return onDistance;
-    }
+    } // переопределение На дистанции
 
+    // конструктор класса Ж
     public Animal(String type, String name, int maxRunDistance, int maxJumpHeight, int maxSwimDistance) {
         this.type = type;
         this.name = name;
@@ -24,6 +26,7 @@ public class Animal implements Competitor {
         this.onDistance = true;
     }
 
+    // переопределение метода бега
     @Override
     public void run(int dist) {
         if (dist <= maxRunDistance) {
@@ -34,6 +37,7 @@ public class Animal implements Competitor {
         }
     }
 
+    // переопределение метода прыжка
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight) {
@@ -44,6 +48,7 @@ public class Animal implements Competitor {
         }
     }
 
+    // переопределение метода плавания
     @Override
     public void swim(int dist) {
         if (maxSwimDistance == 0) {
@@ -59,6 +64,7 @@ public class Animal implements Competitor {
         }
     }
 
+    // переопределение метода Информации
     @Override
     public void info() {
         System.out.println(type + " " + name + " - " + onDistance);

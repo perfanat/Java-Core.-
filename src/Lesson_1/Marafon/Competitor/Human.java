@@ -1,19 +1,22 @@
-package Lesson_1.Marafon;
+package Lesson_1.Marafon.Competitor;
 
+// класс Человека
 public class Human implements Competitor {
-    String name;
+    String name; // имя
 
-    int maxRunDistance;
-    int maxJumpHeight;
-    int maxSwimDistance;
+    int maxRunDistance; // макс длина бега
+    int maxJumpHeight; // макс высота прыжка
+    int maxSwimDistance; // макс длина плавания
 
-    boolean active;
+    boolean active; // на дистанции
 
+    // на дистанции?
     @Override
     public boolean isOnDistance() {
         return active;
     }
 
+    // конструктор человека
     public Human(String name) {
         this.name = name;
         this.maxRunDistance = 5000;
@@ -22,6 +25,7 @@ public class Human implements Competitor {
         this.active = true;
     }
 
+    // переопределение метода бега
     @Override
     public void run(int dist) {
         if (dist <= maxRunDistance) {
@@ -32,6 +36,7 @@ public class Human implements Competitor {
         }
     }
 
+    // переопределение метода прыжка
     @Override
     public void jump(int height) {
         if (height <= maxJumpHeight) {
@@ -42,6 +47,7 @@ public class Human implements Competitor {
         }
     }
 
+    // переопределение метода плавания
     @Override
     public void swim(int dist) {
         if (dist <= maxSwimDistance) {
@@ -52,6 +58,7 @@ public class Human implements Competitor {
         }
     }
 
+    // переопределение метода информации
     @Override
     public void info() {
         System.out.println(name + " - " + active);
