@@ -16,7 +16,7 @@ public class Phones {
         hashMap.get("Саша").add(333);
         hashMap.get("Саша").add(444);
 
-        add ("Джон", 555); // добавление записи
+        add ("Саша", 555); // добавление записи
 
         System.out.println(hashMap);
 
@@ -24,6 +24,7 @@ public class Phones {
     }
 
     private static void add(String s, int i){
+        if (!hashMap.containsKey(s))
         hashMap.put(s, new HashSet<>());
         hashMap.get(s).add(i);
     }
