@@ -26,6 +26,11 @@ public class ClientHandler {
                         while (true) {
                             String str = in.readUTF();
                             if (str.equals("/end")) {
+                                System.out.println("Клиент отключился");
+                                server.clients.remove(new ClientHandler(socket,server));
+                                in.close();
+                                out.close();
+                                socket.close();
                                 break;
                             }
                             server.broadCastMsg(str);

@@ -1,14 +1,10 @@
 package Lesson_6.client;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -30,7 +26,7 @@ public class Controller implements Initializable {
 
     Socket socket;
     DataInputStream in;
-    DataOutputStream out;
+    static DataOutputStream out;
 
     final String IP_ADRESS = "localhost";
     final int PORT = 8189;

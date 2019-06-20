@@ -14,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?scenebuilder-stylesheet /css/Style.css?>
 
-<VBox fx:id="pane" alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <stylesheets><URL value="@/css/Style.css" /> </stylesheets>
-    <TextArea fx:id="textArea" editable="false" prefHeight="355.0" prefWidth="238.0" style="-fx-background-color: transparente;" VBox.vgrow="ALWAYS">
+<VBox fx:id="pane" alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lesson_6.client.Controller">
+    <stylesheets><URL value="@/Lesson_6/client/css/Style.css" /> </stylesheets>
+    <TextArea fx:id="textArea" editable="false" prefHeight="355.0" prefWidth="238.0" style="-fx-background-color: transparente;" wrapText="true" VBox.vgrow="ALWAYS">
         <font>
             <Font name="Times New Roman" size="24.0" />
         </font></TextArea>
@@ -41,12 +41,12 @@
             <font>
                 <Font size="16.0" />
             </font></TextField>
-        <Button fx:id="btn1" onAction="#sendMsg" style="-fx-background-radius: 20;" text="Send" textAlignment="CENTER" textFill="#f8f5f5" textOverrun="LEADING_WORD_ELLIPSIS">
+        <Button fx:id="btn1" onAction="#sendMsg" style="-fx-background-radius: 20;" text="Ok" textAlignment="CENTER" textFill="#f8f5f5" textOverrun="LEADING_WORD_ELLIPSIS">
             <effect>
                 <InnerShadow />
             </effect>
             <HBox.margin>
-                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+                <Insets bottom="7.0" left="15.0" right="10.0" top="5.0" />
             </HBox.margin>
             <font>
                 <Font size="16.0" />
