@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?scenebuilder-stylesheet /css/Style.css?>
 
-<?import javafx.scene.control.DialogPane?>
-<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121"
-      fx:controller="Lesson_6.client.Controller">
-
-    <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS" />
+<VBox fx:id="pane" alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <stylesheets><URL value="@/css/Style.css" /> </stylesheets>
+    <TextArea fx:id="textArea" editable="false" prefHeight="355.0" prefWidth="238.0" style="-fx-background-color: transparente;" VBox.vgrow="ALWAYS">
+        <font>
+            <Font name="Times New Roman" size="24.0" />
+        </font></TextArea>
     <HBox>
-        <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
-        <Button fx:id="btn1" onAction="#sendMsg" text="Send" />
+        <TextField fx:id="textField" onAction="#sendMsg" prefHeight="25.0" prefWidth="400.0" promptText="введите сообщение" style="-fx-background-radius: 20;">
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant color="#fffffffa" />
+                    </light>
+                </Lighting>
+            </effect>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+            </HBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font></TextField>
+        <Button fx:id="btn1" onAction="#sendMsg" style="-fx-background-radius: 20;" text="Send" textAlignment="CENTER" textFill="#f8f5f5" textOverrun="LEADING_WORD_ELLIPSIS">
+            <effect>
+                <InnerShadow />
+            </effect>
+            <HBox.margin>
+                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+            </HBox.margin>
+            <font>
+                <Font size="16.0" />
+            </font></Button>
     </HBox>
-
 </VBox>
