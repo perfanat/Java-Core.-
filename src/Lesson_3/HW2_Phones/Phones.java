@@ -21,6 +21,7 @@ public class Phones {
         System.out.println(hashMap);
 
         get("Саша"); // поиск номера
+        get("Петр"); // поиск номера
     }
 
     private static void add(String s, int i){
